@@ -2,9 +2,24 @@
 <html>
     <head>
         <title>home</title>
+        <script>
+            let paths = [
+                "p1.html",
+                "p2.html",
+                "p3.html"
+            ]
+            function randomChoice(arr) {
+                console.log(arr)
+                return arr[Math.floor(Math.random() * arr.length)]; 
+            }
+            function goto_randomly(links) {
+                console.log(1)
+                window.location = randomChoice(links)
+            }
         </script>
     </head>
     <body>
         <h1>Home page</h1>
+        <a href="#" onclick="goto_randomly(paths)">Go to</a>
     </body>
 </html>
