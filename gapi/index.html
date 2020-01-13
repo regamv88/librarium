@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sheets API Quickstart</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <p>Google Sheets API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="load_button" style="display: block;">Load</button>
+    <button id="inc_button" style="display: block;">Inc</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <script type="text/javascript">
+
+      var incButton = document.getElementById('inc_button');
+      var loadButton = document.getElementById('load_button');
+      
+      function initClient() {
+          loadButton.onclick = handleLoadClick;
+          incButton.onclick = handleIncClick;
+      }
+    
+      function handleIncClick(event) {
+          console.log('inc');
+          incTotal()
+      }
+       
+      function handleLoadClick(event) {
+          console.log('load');
+          getTotal()
+      }
+
+      function incTotal() {
+        var mainCounter = db.collection('counters').doc('main');
+        mainCounter.update({value: firebase.firestore.FieldValue.increment(1)});
+      }
+
+      function getTotal() {
+          
+        var docRef = db.collection('counters').doc('main');
+        docRef.get().then(function(doc) {
+            if (doc.exists) {
+                console.log("Document data:", doc.data());
+            } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+            }
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+        });
+      }
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script> 
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD9BO3M_2XGIiBEAdl8dapX3P81sRahLgU",
+        authDomain: "psycodb.firebaseapp.com",
+        databaseURL: "https://psycodb.firebaseio.com",
+        projectId: "psycodb",
+        storageBucket: "psycodb.appspot.com",
+        messagingSenderId: "618629936104",
+        appId: "1:618629936104:web:d7cc4522e478370e3faa5d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    initClient();
+
+    </script>
+  </body>
+</html>

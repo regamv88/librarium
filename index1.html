@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Либрариум Настройки1</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                    <div class="header__logo">
+                             <img src="./img/svg/logo1.svg" alt="О “Librarium”." class="header__logo-pic">
+                            
+                    </div>
+            
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">О нас</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Настройки</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Рекомендации</a>
+                                </li>
+                            </ul>
+                        </nav>
+            </div>
+        </div>
+    </header>   
+    
+    <main class="main">
+        <section class="intro1">
+            <div class="wrapper">
+                <p class="intro__title">
+                    Настройки
+                </p>
+                <h1 class="intro1__title">
+                    Либрариум может использовать Ваши персональные данные для составления рекомендаций.
+                </h1>
+                <p class="intro1__subtitle">
+                    Либрариум может использовать приведенные ниже данные о Ваших предпочтениях для составления персональных рекомендаций на сайте: 
+                </p>
+            </div>
+        </section>
+
+        <section class="genre">
+            <div class="genre__wrap">
+                <h1 class="genre__title">
+                        Любимые жанры
+                </h1>
+            </div>
+            <div class="genre-list__wrap">
+                <h2 class="genre__list">
+                    Например:
+                </h2>
+                <p class="genre__list1">
+                    История
+                </p>
+                <p class="genre__list1">
+                    Психология
+                </p>
+                <p class="genre__list1">
+                    Детективы
+                </p>
+                <p class="genre__list1">
+                    Современная проза
+                </p>
+                <p class="genre__list1">
+                    Фантастика
+                </p>
+                <p class="genre__list1">
+                    Любовные романы
+                </p>
+                <p class="genre__list1">
+                    Спорт, здоровье, красота
+                </p>
+                <p class="genre__list1">
+                    Бизнес-книги
+                </p>
+            </div>
+        </section>
+        <section class="personal">
+            <div class="wrapper">
+                <p class="personal__subtitle">
+                    Для составления более точных рекомендаций, Либрариум может использовать также Ваши личные данные. 
+                </p>
+            </div>
+            <div class="personal__wrap">
+                <h1 class="personal__title">
+                    Личная информация 
+                </h1>
+            </div>
+            <div class="personal-list__wrap">
+                <h2 class="personal__list">
+                    Ваш возраст
+                </h2>
+                <h2 class="personal__list">
+                    Страна проживания
+                </h2>
+                <h2 class="personal__list">
+                    Образование
+                </h2>
+            </div>
+        </section>
+        <div class="wrapper">
+            <form action="/example/" class="search-form">
+                <p class="search-form__info">
+                    <button id="submit-btn" type="submit" class="search-form__submit"> Далее </button>                
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function(event){
+            event.preventDefault();
+            window.location = "./index2.html";
+        });
+    </script>
+</body>
+</html>

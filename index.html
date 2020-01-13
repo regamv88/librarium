@@ -1,81 +1,138 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>home</title>
-    </head>
-    <body>
-        <h1>Home page</h1>
-        <!-- <a href="#" onclick="goto_randomly(paths)">Go to randomly</a> -->
-        <a href="#" onclick="goto_sequentially(paths)">Go to sequentially</a>
-
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyAhnM89khTZxKqF6NVsrBX4sU-SMYY8wPw",
-                authDomain: "psycodb-162b2.firebaseapp.com",
-                databaseURL: "https://psycodb-162b2.firebaseio.com",
-                projectId: "psycodb-162b2",
-                storageBucket: "psycodb-162b2.appspot.com",
-                messagingSenderId: "1070067563402",
-                appId: "1:1070067563402:web:e0c537b52bec7e997da673"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            var db = firebase.firestore();
-        </script>
-        <script>
-            let paths = [
-                "p1.html",
-                "p2.html",
-                "p3.html"
-            ]
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Либрариум</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                    <div class="header__logo">
+                             <img src="./img/svg/logo1.svg" alt="О “Librarium”." class="header__logo-pic">
+                            
+                    </div>
             
-            function randomChoice(arr) {
-                return arr[Math.floor(Math.random() * arr.length)]; 
-            }
-            
-            function goto_randomly(links) {
-                window.location = randomChoice(links)
-            }
-            
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">О нас</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Настройки</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Рекомендации</a>
+                                </li>
+                            </ul>
+                        </nav>
+            </div>
+        </div>
+    </header>    
+    <main class="main">
+        <section class="intro">
+            <div class="wrapper">
+                <h1 class="intro__title">
+                    О “Librarium”.
+                </h1>
+                <p class="intro__subtitle">
+                    Либрариум - это онлайн-сервис по рекомендации книг. Либрариум предложит Вам список литературных произведений, подходящих именно для Вас.
+                </p>
+                <p class="intro__subtitle1">
+                    Мы попросим Вас взаимодейстовать с двумя страницами, которые будут показаны далее: - 1) раздел Настройки и 2) раздел Рекомендации.  
+                </p>
+                <p class="intro__subtitle1">
+                    Пожалуйста, внимательно ознакомьтесь со всей информацией, которая будет Вам предоставлена.
+                </p>
+                <p class="intro__subtitle1">
+                    Спасибо!
+                </p>
+                <form action="/example/" class="search-form">
+                    <p class="search-form__info">
+                        <button id="submit-btn" type="submit" class="search-form__submit"> Далее </button>                  
+                    </p>
+                </form>
+            </div>
+            <div class="intro__pic">
+                <img src="./img/books.png" alt="О “Librarium”." class="intro__logo-pic" style="margin-left: 25px;">
+        </section>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
 
-            function getTotal() {
-                var docRef = db.collection('counters').doc('total');
-                return docRef.get().then(function(doc) {
-                    let ret = 0;
-                    if (doc.exists) {
-                        console.log("Document data:", doc.data());
-                        return doc.data().value;
-                    } else {
-                        // doc.data() will be undefined in this case
-                        console.log("No such document!");
-                        return 0;
-                    }
-                }).catch(function(error) {
-                    console.log("Error getting document:", error);
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAhnM89khTZxKqF6NVsrBX4sU-SMYY8wPw",
+            authDomain: "psycodb-162b2.firebaseapp.com",
+            databaseURL: "https://psycodb-162b2.firebaseio.com",
+            projectId: "psycodb-162b2",
+            storageBucket: "psycodb-162b2.appspot.com",
+            messagingSenderId: "1070067563402",
+            appId: "1:1070067563402:web:e0c537b52bec7e997da673"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
+    <script>
+        let paths = [
+            "index1.html",
+            "index11.html",
+            "index12.html"
+        ]
+        
+        function randomChoice(arr) {
+            return arr[Math.floor(Math.random() * arr.length)]; 
+        }
+        
+        function goto_randomly(links) {
+            window.location = randomChoice(links)
+        }
+        
+
+        function getTotal() {
+            var docRef = db.collection('counters').doc('total');
+            return docRef.get().then(function(doc) {
+                let ret = 0;
+                if (doc.exists) {
+                    console.log("Document data:", doc.data());
+                    return doc.data().value;
+                } else {
+                    // doc.data() will be undefined in this case
+                    console.log("No such document!");
+                    return 0;
+                }
+            }).catch(function(error) {
+                console.log("Error getting document:", error);
+            });
+        }
+
+        function goto_sequentially(links) {
+            getTotal().then(function(total){
+                let location = links[total % links.length];
+                incTotal().then(function(){
+                    window.location = location;
                 });
-            }
+            });
+        }
 
-            function goto_sequentially(links) {
-                getTotal().then(function(total){
-                    let location = links[total % links.length];
-                    incTotal().then(function(){
-                        window.location = location;
-                    });
-                });
-            }
+        function incTotal() {
+            var mainCounter = db.collection('counters').doc('total');
+            return mainCounter.update({value: firebase.firestore.FieldValue.increment(1)});
+        }
 
-            function incTotal() {
-                var mainCounter = db.collection('counters').doc('total');
-                return mainCounter.update({value: firebase.firestore.FieldValue.increment(1)});
-            }
-        </script>
-    </body>
+        document.getElementById("submit-btn").addEventListener("click", function(event){
+            event.preventDefault();
+            goto_sequentially(paths);
+        });
+    </script>
+</body>
 </html>

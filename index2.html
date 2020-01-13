@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Либрариум Рекомендации</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                    <div class="header__logo">
+                             <img src="./img/svg/logo1.svg" alt="О “Librarium”." class="header__logo-pic">
+                            
+                    </div>
+            
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">О нас</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Настройки</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="#!" class="header__link">Рекомендации</a>
+                                </li>
+                            </ul>
+                        </nav>
+            </div>
+        </div>
+    </header>  
+    <main class="main">
+        <section class="intro2">
+            <div class="wrapper">
+                <p class="intro__title">
+                    Рекомендации
+                </p>
+                <h1 class="intro-main-title">
+                    Книги, подобранные для Вас:
+                </h1>
+                <p class="intro2__subtitle">
+                    Либрариум подобрал книги специально для Вас на основе ваших предпочтений и настроек приватности.
+                </p>
+                <p class="intro2__subtitle1">
+                    Пожалуйста, ознакомьтесь внимательно с каждым предложенным вариантом перед тем, как нажать кнопку “Далее”.
+                </p>
+            </div>
+        </section>
+
+        <section class="recommendations">
+            <div class="recommendations__wrap">
+                <div class="recommendations__pic">
+                    <img src="./img/book1.png" alt="Мартин Сэй”." class="recommendations-book1__pic">
+                </div>
+                <h1 class="recommendations-text__title">
+                    Мартин Сэй 
+                </h1>
+                <p class="recommendations-text__subtitle">
+                    “Зеркальный вор” 
+                </p>
+                <p class="recommendations-text__description">
+                    Действие «Зеркального вора» охватывает несколько стран, континентов и столетий — и три разных Венеции: от величественных палаццо и стекольных мастерских Венеции XVI века, где тайные агенты европейских и азиатских держав пытаются вызнать секрет производства легендарных муранских зеркал, — до баров и кофеен другой, лос-анджелесской Венеции, где поэты и писатели бит-поколения выясняют, кто из них самый гениальный, а малолетний уличный мошенник жаждет найти автора поразившей его воображение поэмы «Зеркальный вор». 
+                </p>
+                <div class="recommendations__pic">
+                    <img src="./img/book2.png" alt="Дженнис Коулди”." class="recommendations-book1__pic">
+                </div>
+                <h1 class="recommendations-text__title">
+                    Дженнис Коулди
+                 </h1>
+                <p class="recommendations-text__subtitle">
+                    “Наследница теней” 
+                </p>
+                <p class="recommendations-text__description">
+                    Сила и власть – это яд, способный отравить душу любого. Эта история о безродной рабыне и дочери короля, лишенных права распоряжаться собственными судьбами. Впереди их ждет тернистый путь несправедливости и жестокости. Но, чтобы дойти до конца, им придётся измениться – принять свои темные стороны и научиться ими управлять. Тяжелые решения и неоднозначные поступки приведут их к судьбоносной встрече на тропе войны за лучший мир.
+                </p>
+                <div class="recommendations__pic">
+                    <img src="./img/book3.png" alt="Марк Сэнди”." class="recommendations-book1__pic">
+                </div>
+                <h1 class="recommendations-text__title">
+                    Хелен Макдональд
+                  </h1>
+                <p class="recommendations-text__subtitle">
+                    “Я значит Ястреб” 
+                </p>
+                <p class="recommendations-text__description">
+                    Смерть любимого отца расколола жизнь Хелен на "до" и "после", однако она нашла необычный способ справиться с горем, взяв на воспитание ястреба-тетеревятника. Страдающая от горечи утраты женщина и крылатый хищник - казалось бы, что общего может быть между ними? Однако с каждым днем они все крепче привязываются друг к другу и все глубже постигают красоту окружающего мира и непреходящее очарование бытия. 
+                </p>
+            </div>
+        </section>
+        <div class="wrapper">
+            <form action="/example/" class="search-form">
+                <p class="search-form__info">        
+                    <button id="submit-btn" type="submit" class="search-form__submit"> Далее </button>                
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function(event){
+            event.preventDefault();
+            window.location = "https://docs.google.com/forms/d/e/1FAIpQLSeXKgWVYRBxqL9LgSvmg5G4nLS5zQMPXHV4oAWgtHIDQf2aIA/viewform?usp=sf_link";
+        });
+    </script>
+</body>
+</html>
