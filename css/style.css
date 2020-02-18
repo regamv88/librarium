@@ -494,12 +494,9 @@ textarea {
 }
 
 .intro__pic{
-    position: absolute;
-    width: 505px;
-    height: 338px;
-    left: 815px;
-    top: 330px;
-    z-index:-1;
+    float: right;
+    margin: 10px 10px 10px 10px;
+    z-index: -1;
 }
 .search-form__info{
     margin-top: 50px;
