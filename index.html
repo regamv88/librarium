@@ -124,6 +124,10 @@
                 });
             });
         }
+        
+        function goto(link) {
+            window.location = link;
+        }
 
         function incTotal() {
             var mainCounter = db.collection('counters').doc('total');
@@ -132,7 +136,7 @@
 
         document.getElementById("submit-btn").addEventListener("click", function(event){
             event.preventDefault();
-            goto_sequentially(paths);
+            goto(paths[0])
         });
     </script>
 </body>
